@@ -1,4 +1,130 @@
-.title {
-  color: brown;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.page {
+  background-color: #484848;
+
+}
+
+
+.header {
+  padding: 0 40px;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  color: azure;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+}
+
+@media (max-width: 660px) {
+  .header {
+    justify-content: center;
+  }
+}
+
+.header__title {
   text-transform: uppercase;
+  font-size: 40px;
+}
+
+@media (max-width: 660px) {
+  .header__title {
+    display: none;
+  }
+}
+
+
+.header__lists {
+  list-style: none;
+  display: flex;
+
+  font-size: 20px;
+  gap: 30px;
+}
+
+.header__list a {
+  text-decoration: none;
+  color: azure;
+  cursor: pointer;
+}
+
+
+
+.content {
+  padding-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  justify-content: center;
+  gap: 25px;
+}
+
+.element {
+  max-width: 300px;
+
+}
+
+.element__img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 400px;
+  border-radius: 6px;
+}
+
+.element__info {
+  display: grid;
+}
+
+.element__title {
+  color: azure;
+  margin-bottom: 10px;
+
+}
+
+.element__price {
+  color: yellowgreen;
+  margin-bottom: 10px;
+}
+
+.element__btn {
+  text-transform: uppercase;
+  font-family: Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-style: inherit;
+  border-radius: 6px;
+  height: 50px;
+  background-color: gold;
+  cursor: pointer;
+
+  transition: all 0.1s linear;
+}
+
+.element__btn:hover {
+  background-color: black;
+  color: azure;
+  transition: all 0.1s linear;
+
 }
